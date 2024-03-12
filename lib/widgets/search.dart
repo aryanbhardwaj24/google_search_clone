@@ -41,15 +41,15 @@ class Search extends StatelessWidget {
                 child: SvgPicture.asset(
                   'assets/images/search-icon.svg',
                   colorFilter:
-                      const ColorFilter.mode(searchColor, BlendMode.srcIn),
+                      const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                 ),
               ),
               suffixIcon: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SvgPicture.asset(
                   'assets/images/mic-icon.svg',
-                  colorFilter:
-                      const ColorFilter.mode(searchColor, BlendMode.srcIn),
+                  colorFilter: const ColorFilter.mode(
+                      Colors.indigoAccent, BlendMode.srcIn),
                 ),
               ),
             ),
