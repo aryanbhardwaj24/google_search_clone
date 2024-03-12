@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_search_clone/colors.dart';
 import 'package:google_search_clone/widgets/search.dart';
+import 'package:google_search_clone/widgets/translation_buttons.dart';
 import 'package:google_search_clone/widgets/web/search_buttons.dart';
 
 class WebScreenLayout extends StatelessWidget {
@@ -89,6 +90,10 @@ class WebScreenLayout extends StatelessWidget {
                         height: 20,
                       ),
                       SearchButtons(),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TranslationButtons(),
                     ],
                   ),
                 ],
