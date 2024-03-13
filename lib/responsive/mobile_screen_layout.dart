@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_search_clone/colors.dart';
+import 'package:google_search_clone/widgets/mobile/mobile_footer.dart';
 import 'package:google_search_clone/widgets/search.dart';
 import 'package:google_search_clone/widgets/translation_buttons.dart';
 import 'package:google_search_clone/widgets/web/search_buttons.dart';
-import 'package:google_search_clone/widgets/web/web_footer.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({super.key});
@@ -94,7 +94,7 @@ class MobileScreenLayout extends StatelessWidget {
                     TranslationButtons(),
                   ],
                 ),
-                WebFooter(),
+                MobileFooter(),
               ],
             ),
           ),
