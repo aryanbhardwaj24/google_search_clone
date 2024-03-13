@@ -17,30 +17,33 @@ class MobileScreenLayout extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         elevation: 0,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
+        ),
+        title: SizedBox(
+          width: size.width * 0.38,
+          child: const DefaultTabController(
+            length: 2,
+            child: TabBar(
+              labelColor: blueColor,
+              unselectedLabelColor: Colors.white,
+              indicatorColor: blueColor,
+              tabs: [
+                Tab(
+                  text: 'All',
+                ),
+                Tab(
+                  text: 'Images',
+                ),
+              ],
+            ),
+          ),
+        ),
         actions: [
-          TextButton(
-            onPressed: () {},
-            child: const Text(
-              'Gmail',
-              style: TextStyle(
-                color: primaryColor,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-          ),
-          TextButton(
-            onPressed: () {},
-            child: const Text(
-              'Images',
-              style: TextStyle(
-                color: primaryColor,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
           IconButton(
             onPressed: () {},
             icon: SvgPicture.asset(
