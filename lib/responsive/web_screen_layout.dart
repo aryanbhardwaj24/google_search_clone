@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_search_clone/colors.dart';
 import 'package:google_search_clone/widgets/search.dart';
 import 'package:google_search_clone/widgets/translation_buttons.dart';
-import 'package:google_search_clone/widgets/web/search_buttons.dart';
+import 'package:google_search_clone/widgets/search_buttons.dart';
 import 'package:google_search_clone/widgets/web/web_footer.dart';
 
 class WebScreenLayout extends StatelessWidget {

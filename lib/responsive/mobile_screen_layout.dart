@@ -4,7 +4,7 @@ import 'package:google_search_clone/colors.dart';
 import 'package:google_search_clone/widgets/mobile/mobile_footer.dart';
 import 'package:google_search_clone/widgets/search.dart';
 import 'package:google_search_clone/widgets/translation_buttons.dart';
-import 'package:google_search_clone/widgets/web/search_buttons.dart';
+import 'package:google_search_clone/widgets/search_buttons.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({super.key});
