@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_search_clone/colors.dart';
 import 'package:google_search_clone/widgets/search_header.dart';
 import 'package:google_search_clone/widgets/search_tabs.dart';
 
@@ -7,25 +8,60 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //Web Header
-            SearchHeader(),
+            const SearchHeader(),
             //tabs for images, news, ...etc.
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: SearchTabs(),
             ),
-            Divider(
+            const Divider(
               height: 0,
               thickness: 0.2,
-            )
+            ),
             //search results (including the time taken to fetch the results)
             //pagination buttons
+            SizedBox(
+              width: double.infinity,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      '< Prev',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: blueColor,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Next >',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: blueColor,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
