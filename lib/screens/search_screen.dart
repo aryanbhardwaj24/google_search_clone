@@ -20,6 +20,10 @@ class SearchScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: SearchTabs(),
             ),
+            Divider(
+              height: 0,
+              thickness: 0.2,
+            )
             //search results (including the time taken to fetch the results)
             //pagination buttons
           ],
