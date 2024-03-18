@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_search_clone/colors.dart';
+import 'package:google_search_clone/widgets/search_footer.dart';
 import 'package:google_search_clone/widgets/search_header.dart';
 import 'package:google_search_clone/widgets/search_tabs.dart';
 
@@ -56,12 +57,13 @@ class SearchScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 30,
-                  ),
                 ],
               ),
             ),
+            const SizedBox(
+              height: 30,
+            ),
+            const SearchFooter(),
           ],
         ),
       ),
