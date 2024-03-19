@@ -25,13 +25,13 @@ To run this project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/aryanbhardwaj24/google-search-clone.git
+   git clone https://github.com/aryanbhardwaj24/google_search_clone.git
    ```
 
 2. **Navigate to Directory**: Change into the project directory:
 
    ```bash
-   cd shopping_app
+   cd google_search_clone
    ```
 
 3. **API Keys Setup**: You need to obtain API keys from the Google Custom Search JSON API. Create a new file named `api_keys.dart` inside the `lib/config/` directory. Add your API key and context key to this file as follows:
