@@ -8,56 +8,53 @@ class SearchTabs extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SizedBox(
       height: 55,
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            SearchTab(
-              isActive: true,
-              title: 'All',
-              icon: Icons.search,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            SearchTab(
-              title: 'Images',
-              icon: Icons.image,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            SearchTab(
-              title: 'Map',
-              icon: Icons.map,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            SearchTab(
-              title: 'News',
-              icon: Icons.newspaper,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            SearchTab(
-              title: 'Shopping',
-              icon: Icons.shop,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            SearchTab(
-              title: 'More',
-              icon: Icons.more_vert,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-          ],
-        ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          SearchTab(
+            isActive: true,
+            title: 'All',
+            icon: Icons.search,
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          SearchTab(
+            title: 'Images',
+            icon: Icons.image,
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          SearchTab(
+            title: 'Map',
+            icon: Icons.map,
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          SearchTab(
+            title: 'News',
+            icon: Icons.newspaper,
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          SearchTab(
+            title: 'Shopping',
+            icon: Icons.shop,
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          SearchTab(
+            title: 'More',
+            icon: Icons.more_vert,
+          ),
+          SizedBox(
+            width: 20,
+          ),
+        ],
       ),
     );
   }

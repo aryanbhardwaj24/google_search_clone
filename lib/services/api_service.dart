@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:google_search_clone/config/api_json.dart';
 import 'package:google_search_clone/config/api_keys.dart';
 import 'package:http/http.dart' as http;
@@ -26,7 +27,7 @@ class ApiService {
         }
       }
     } catch (e) {
-      print(e.toString());
+      debugPrint(e.toString());
     }
 
     return apiResponse;
