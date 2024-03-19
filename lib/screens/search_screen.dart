@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_search_clone/colors.dart';
+import 'package:google_search_clone/services/api_service.dart';
 import 'package:google_search_clone/widgets/search_footer.dart';
 import 'package:google_search_clone/widgets/search_header.dart';
+import 'package:google_search_clone/widgets/search_result_component.dart';
 import 'package:google_search_clone/widgets/search_tabs.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -27,6 +29,56 @@ class SearchScreen extends StatelessWidget {
               thickness: 0.2,
             ),
             //search results (including the time taken to fetch the results)
+            FutureBuilder(
+              future: ApiService().fetchData(queryTerm: 'Aryan Bhardwaj iith'),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.only(
+                          left: 150,
+                          top: 12,
+                        ),
+                        child: Text(
+                          'About ${snapshot.data?['searchInformation']['formattedTotalResults']} results (${snapshot.data?['searchInformation']['formattedSearchTime']} seconds)',
+                          style: const TextStyle(
+                            fontSize: 15,
+                            color: Color(0xFF70757a),
+                          ),
+                        ),
+                      ),
+                      ListView.builder(
+                        itemCount: snapshot.data?['items'].length,
+                        shrinkWrap: true,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(
+                              left: 150,
+                              top: 10,
+                            ),
+                            child: SearchResultComponent(
+                              link: snapshot.data?['items'][index]
+                                  ['formattedUrl'],
+                              linkToGo: snapshot.data?['items'][index]['link'],
+                              text: snapshot.data?['items'][index]['title'],
+                              description: snapshot.data?['items'][index]
+                                  ['snippet'],
+                            ),
+                          );
+                        },
+                      )
+                    ],
+                  );
+                }
+
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+            ),
             //pagination buttons
             SizedBox(
               width: double.infinity,
